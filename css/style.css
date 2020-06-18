@@ -1,0 +1,171 @@
+/* @import url('normalize.css'); */
+/* @import url('googleFonts-ProximaNova.css'); */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /* about 10px at medium font size setting in your browser */
+}
+.container {
+  background-image: url('');
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .container {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    font-size: 1rem;
+  }
+}
+header {
+  background-color: #DEEEF0;
+  padding: 2%;
+}
+header h1 {
+  padding: 15px;
+  text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
+.text-intro h4 {
+  text-transform: uppercase;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav-item,
+.nav-item:visited {
+  border: 1px solid black;
+  padding: 5px 10px;
+  color: #052836;
+  font-weight: bold;
+  font-size: 1.6rem;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .nav-item,
+  .nav-item:visited {
+    font-size: 1.2rem;
+  }
+}
+.nav-item:hover {
+  color: white;
+  text-decoration: none;
+}
+.nav-item.active {
+  color: white;
+  background-color: #052836;
+}
+main {
+  max-width: 100%;
+  padding: 10px;
+}
+.btn.btn-projects {
+  background: transparent;
+  border-width: 2px;
+  border-color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: teal;
+}
+.btn.btn-projects:hover {
+  background-color: teal;
+  color: white;
+}
+.intro {
+  display: flex;
+}
+.text-intro {
+  padding: 4%;
+}
+p {
+  margin: 10px 0;
+}
+section {
+  margin: 30px 0;
+  display: flex;
+}
+@media (max-width: 500px) {
+  section {
+    flex-flow: column;
+  }
+}
+@media (max-width: 767px) {
+  .intro img {
+    width: 70%;
+    height: 70%;
+  }
+}
+section.projects {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.project-item {
+  flex: 1 0 21%;
+  text-align: center;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .project-item img {
+    width: 65%;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+footer {
+  background-color: #DEEEF0;
+}
+footer span {
+  display: block;
+  text-align: center;
+}
+footer nav ul {
+  list-style-type: none;
+}
+footer nav {
+  padding: 5px 35px 0 0;
+}
+footer nav ul li {
+  display: inline;
+  margin: 0 5px;
+}
+footer h5 {
+  font-size: 1.1rem;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 0 25%;
+  align-items: center;
+}
+.card img {
+  width: 200px;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
