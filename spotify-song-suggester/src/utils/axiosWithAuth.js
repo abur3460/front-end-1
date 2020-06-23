@@ -4,7 +4,7 @@ const axiosWithAuth = () => {
     const token = localStorage.getItem('token');
 
     return axios.create({
-        baseURL: 'unknown.com',
+        baseURL: 'https://spotifysongsbw.herokuapp.com/api',
         headers: {
             Authorization: token
         }
