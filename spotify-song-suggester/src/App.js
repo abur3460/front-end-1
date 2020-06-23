@@ -1,26 +1,22 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import './App.css';
+import LoginForm from './components/LoginForm';
+import RegisterForm from "./components/RegisterForm";
+import Navigation from "./components/Navigation";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import LoginForm from './components/LoginForm'
-import RegisterForm from './components/RegisterForm'
-import PrivateRoute from './utils/PrivateRoute'
-import MusicList from './components/MusicList'
 
 function App() {
   return (
     <Router>
-      <div>
-      </div> 
-
-      
-
-      <Switch>
-        <PrivateRoute exact path='/hub' component={MusicList} />
-        <Route exact path ='/' component={RegisterForm} />
-        <Route path='/login' component={LoginForm} />
-      </Switch>
+      <div className="App">
+        <Route path="/" component={Navigation}/>
+        {/* <LoginForm /> */}
+        <Route exact path="/" component={RegisterForm} />
+        <Route path="/login" component={LoginForm} />
+      </div>
     </Router>
-  )
+  );
 }
 
 export default App;

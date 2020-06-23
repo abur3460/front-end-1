@@ -1,0 +1,55 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #86C232;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 4px;
+  height: 60px;
+}
+
+.navBar h3 {
+  border: 2px solid black;
+  background-color: black;
+  padding: 10px;
+  width: 300px;
+  height: 32px;
+  margin-top: 2px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.navBar nav {
+  display: flex;
+  width: 60%;
+  margin-right: 40px;
+  /* height: 100%; */
+  /* border: 2px solid white; */
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  list-style: none;
+  align-items: center;
+  /* border: 2px solid rgb(35, 97, 133); */
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  /* border: 2px solid red; */
+  padding: 20px;
+}
+
+nav ul a:hover {
+  background-color: black;
+}
+
