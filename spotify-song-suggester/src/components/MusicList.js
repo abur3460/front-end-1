@@ -13,10 +13,12 @@ const MusicList = () => {
     }, [])
 
     return (
-        <div>
-            <h1>yo!</h1>
+        <div className='songs-page'>
             {songs.map(song => (
-                <h1>{song.track_name}</h1>
+                <div className='songCard'>
+                    <p>{song.track}</p>
+                    <p>by <em>{song.artist_name}</em></p>
+        </div>       
             ))}
         </div>
     )
