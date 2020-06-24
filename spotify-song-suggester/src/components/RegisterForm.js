@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import "./LoginForm.css";
+import "./RegisterForm.css";
 import * as Yup from "yup";
 import axios from "axios";
 import { useHistory } from 'react-router-dom';

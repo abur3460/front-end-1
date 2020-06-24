@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
+// import "./SongComponent.css"
 
 const MusicList = () => {
 
@@ -8,17 +9,21 @@ const MusicList = () => {
     useEffect(() => {
         axiosWithAuth()
         .get('/songs')
-        .then(res => setSongs(res.data))
-
+        .then(res => {
+          console.log(res.data)
+          setSongs(res.data)
+        })
     }, [])
 
     return (
-        <div>
-            <h1>yo!</h1>
-            {songs.map(song => (
-                <h1>{song.track_name}</h1>
-            ))}
+      <div className="songs-page">
+      {songs.map(song => (
+        <div className="songCard">
+          <p>{song.track_name}</p>
+          <p>by <em>{song.artist_name}</em></p>
         </div>
+      ))}
+    </div>
     )
 }
 
