@@ -8,9 +8,7 @@ const EditUser = () => {
         password: ''
     })
 
-    const handleChanges = e => {
-        e.preventDefault();
-
-        axiosWithAuth()
-    }
+    return (
+        <LoginForm />
+    )
 }

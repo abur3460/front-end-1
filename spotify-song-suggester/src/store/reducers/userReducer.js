@@ -1,6 +1,7 @@
 export const initialState = {
     name: '',
     userId: null,
+    isFetching: false,
     favSongs: []
 }
 
