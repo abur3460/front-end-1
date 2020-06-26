@@ -1,9 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Navigation.css";
 
 
 const Navigation = () => {
+
+  const history = useHistory();
+
+  const logoutUser = () => {
+    localStorage.clear()
+    history.push('/login')
+  }
 
   return (
     <div className="navBar">
@@ -13,7 +20,7 @@ const Navigation = () => {
           <li><a hreg="#">Songs</a></li>
           <li><Link to="/songs">Your Library</Link></li>
           <li><a href="#">Playlists</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><Link to='/' onClick={logoutUser}>Logout</Link></li>
         </ul>
       </nav>
     </div>
