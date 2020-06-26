@@ -1,7 +1,3 @@
 import axios from 'axios';
+import axiosWithAuth from '../../utils/axiosWithAuth';
 
-export const fetchSongs = () => {
-    return dispatch => {
-        dispatch({ type: 'FETCH_SONG_START'})
-    }
-}
