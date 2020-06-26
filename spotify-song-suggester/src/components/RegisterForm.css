@@ -20,13 +20,17 @@
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 550px;
+  height: 450px;
   margin: 0 auto;
   margin-top: 50px;
   font-size: 1.5rem;
   background-color: #474B4F;
   color: #86C232;
   padding-bottom: 40px;
+}
+
+.register h2 {
+  text-align: center;
 }
 
 .form {
@@ -49,8 +53,8 @@
   border-radius: 5px;
 }
 
-button {
-  /* margin: 20px auto; */
+.register-submit {
+  margin: 20px auto;
   width: 450px;
   height: 45px;
   /* color: #222629; */
@@ -61,7 +65,7 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+.register-submit:hover {
   background-color: #61892F;
 }
 
@@ -84,5 +88,5 @@ button:hover {
 .redirect {
   font-size: 1rem;
   text-align: center;
-  color: white;
+  color: black;
 }

@@ -17,7 +17,6 @@ const RegisterForm = () => {
 // https://spotifysongsbw.herokuapp.com/api/user/register
 // https://reqres.in/api/users
   const onSubmit = (values) => {
-      alert(JSON.stringify(values, null, 2));
       axios.post("https://spotifysongsbw.herokuapp.com/api/user/register", values)
         .then(res => {
           console.log(res)
@@ -34,7 +33,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register">
-      <h1>Register</h1>
+      <h2>Register</h2>
       <Formik {...{initialValues, onSubmit}} validationSchema={validationSchema}>
         {({ values, handleChange, touched, handleBlur, errors}) => (
           <Form className="form">
@@ -81,7 +80,9 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <button type="submit">Submit</button>
+              <button className="register-submit" type="submit">
+                Submit
+              </button>
             </div>
           </Form>
         )}

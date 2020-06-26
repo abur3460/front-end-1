@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
-// import "./SongComponent.css"
+import "./MusicList.css"
 
 
 function searchFor(query){
@@ -68,8 +68,15 @@ const MusicList = () => {
           <button onClick={onClick}>Search!</button>
       {songs.map(song => (
         <div className="songCard">
-          <p>{song.track_name}</p>
-          <p>by <em>{song.artist_name}</em></p>
+          <div className="track-name">
+            <p>{song.track_name}</p>
+          </div>
+          <div className="artist">
+            <p><em>{song.artist_name}</em></p>
+          </div>
+          <div className="button">
+            <button className="favorite" title="Add to library">+</button>
+          </div>
         </div>
       ))}
     </div>

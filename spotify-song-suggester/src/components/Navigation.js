@@ -17,8 +17,8 @@ const Navigation = () => {
       <h3>Spotify Song Suggester</h3>
       <nav>
         <ul>
-          <li><a hreg="#">Home</a></li>
-          <li><Link to="/songs">Songs</Link></li>
+          <li><a hreg="#">Songs</a></li>
+          <li><Link to="/songs">Your Library</Link></li>
           <li><a href="#">Playlists</a></li>
           <li><Link to='/' onClick={logoutUser}>Logout</Link></li>
         </ul>
