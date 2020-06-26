@@ -1,0 +1,47 @@
+.songs-page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.songCard {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #474B4F;
+  border-radius: 4px;
+  padding: 5px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 50px;
+  font-size: 1rem;
+  justify-content: space-between;
+}
+
+.track-name {
+  /* border: 2px solid black; */
+  align-self: center;
+  width: 30%;
+  max-width: 55%;
+}
+
+.button {
+  /* border: 2px solid black; */
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: none;
+}
