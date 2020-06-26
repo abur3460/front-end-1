@@ -11,10 +11,13 @@ const Login = () => {
     const history = useHistory();
     
   const onSubmit = (val) => {
-    alert(JSON.stringify(val));
     axiosWithAuth()
-    .post( "https://spotifysongsbw.herokuapp.com/api/user/login" ,val).then(resp => {localStorage.setItem('token', resp.data.token) 
-    history.push("/hub")})
+    .post( "/user/login" ,val)
+    .then(resp => {
+        console.log(resp.data)
+        localStorage.setItem('token', resp.data.token) 
+        history.push("/")
+    })
     .catch(err => console.log(err))
     
 };
@@ -27,7 +30,7 @@ const Login = () => {
 
   const SignupSchema =
     Yup.object().shape({
-    email: Yup.string().required("add a email"),
+    email: Yup.string().required("add an email"),
     password: Yup.string().required("add a password")
   });
 
