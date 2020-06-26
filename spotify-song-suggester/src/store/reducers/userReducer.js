@@ -1,7 +1,7 @@
 export const initialState = {
-    name: '',
+    email: '',
     userId: null,
-    isFetching: false,
+    isLoggedIn: false,
     favSongs: []
 }
 
