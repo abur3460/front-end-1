@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { Formik, Form, Field } from "formik";
 import "./RegisterForm.css";
 import * as Yup from "yup";
@@ -33,6 +34,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register">
+      <h1 className="title">Spotify Song Suggester</h1>
       <h2>Register</h2>
       <Formik {...{initialValues, onSubmit}} validationSchema={validationSchema}>
         {({ values, handleChange, touched, handleBlur, errors}) => (
@@ -46,9 +48,9 @@ const RegisterForm = () => {
                 name="name"
                 placeholder="username"
               />
-              <span className="errors">
+              <div className="errors">
                 {touched["name"] && errors["name"]}
-              </span>
+              </div>
             </div>
 
             <div className="field-wrap">
@@ -60,9 +62,9 @@ const RegisterForm = () => {
                 name="email"
                 placeholder="email"
               />
-              <span className="errors">
+              <div className="errors">
                 {touched["email"] && errors["email"]}
-              </span>
+              </div>
             </div>
 
             <div className="field-wrap">
@@ -74,15 +76,18 @@ const RegisterForm = () => {
                 name="password" 
                 placeholder="password"
               />
-              <span className="errors">
+              <div className="errors">
                 {touched["password"] && errors["password"]}
-              </span>
+              </div>
             </div>
 
             <div>
-              <button className="register-submit" type="submit">
+              <button className="submit" type="submit">
                 Submit
               </button>
+            </div>
+            <div className="redirect">
+              <p>Have an account? <Link to="/login">Log in</Link></p>
             </div>
           </Form>
         )}

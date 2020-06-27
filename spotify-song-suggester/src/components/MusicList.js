@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import "./MusicList.css"
 
@@ -17,9 +17,9 @@ const MusicList = () => {
     const [values, setValues] = useState('');
 
     const handleChanges = e => {
-        setValues({
-            [e.target.name]: e.target.value
-        })
+      setValues({
+          [e.target.name]: e.target.value
+      })
     }
 
     // useEffect(() => {
@@ -38,37 +38,35 @@ const MusicList = () => {
     // .get('/')
 
     const onClick = () => {
-        axiosWithAuth()
-        .get('/songs')
-        .then(res => {
-            console.log('values:', values.value)
-            console.log('yo', res.data)
-            
-            const results = res.data.filter(
-                searchFor(values.value)
-            )
-            console.log('results:', results)
-            setSongs(results)
-        })
-        .catch(err => console.log('something is wrong', err.message))
+      axiosWithAuth()
+      .get('/songs')
+      .then(res => {
+          console.log('values:', values.value)
+          console.log('yo', res.data)
+          
+          const results = res.data.filter(
+              searchFor(values.value)
+          )
+          console.log('results:', results)
+          setSongs(results)
+      })
+      .catch(err => console.log('something is wrong', err.message))
     }
 
-
     return (
-
-      <div className="songs-page">
-          <input
-           type='text'
-           name='value'
-           value={values.value}
-           onChange={handleChanges}
-           placeholder='Enter song title!'
-          />
-          {console.log('yo', songs.map(song => song))}
-          <button onClick={onClick}>Search!</button>
+    <div className="songs-page">
+      <input
+        type='text'
+        name='value'
+        value={values.value}
+        onChange={handleChanges}
+        placeholder='Enter song title!'
+      />
+      {console.log('yo', songs.map(song => song))}
+      <button onClick={onClick}>Search!</button>
       {songs.map(song => (
         <div className="songCard">
-          <div className="track-name">
+          <div className="track-name" key={song.id}>
             <p>{song.track_name}</p>
           </div>
           <div className="artist">

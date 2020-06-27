@@ -16,12 +16,16 @@ const Navigation = () => {
     <div className="navBar">
       <h3>Spotify Song Suggester</h3>
       <nav>
-        <ul>
+        <Link to="#">Songs</Link>
+        <Link to="/songs">Your Library</Link>
+        <Link to="#">Playlists</Link>
+        <Link to="/" onClick={logoutUser}>Logout</Link>
+        {/* <ul>
           <li><a hreg="#">Songs</a></li>
           <li><Link to="/songs">Your Library</Link></li>
           <li><a href="#">Playlists</a></li>
           <li><Link to='/' onClick={logoutUser}>Logout</Link></li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
   )

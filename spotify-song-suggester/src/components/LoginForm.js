@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useHistory } from 'react-router-dom'
 import axiosWithAuth from '../utils/axiosWithAuth';
+import "./RegisterForm.css";
 
 
 
@@ -19,7 +21,6 @@ const Login = () => {
         history.push("/")
     })
     .catch(err => console.log(err))
-    
 };
 
   const initialValues = {
@@ -28,30 +29,53 @@ const Login = () => {
 };
 
 
-  const SignupSchema =
-    Yup.object().shape({
-    email: Yup.string().required("add an email"),
-    password: Yup.string().required("add a password")
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().required("*Please enter your email"),
+    password: Yup.string().required("*Please enter your password")
   });
 
   return (
     <div className="login">
-      <h1>Log In</h1>
+      <h1 className="title">Spotify Song Suggester</h1>
+      <h2>Log In</h2>
       <Formik {...{initialValues, onSubmit}} 
-      validationSchema={SignupSchema}>
-        {() => (
+      validationSchema={validationSchema}>
+        {({touched, errors}) => (
           <Form className="form">
-            <div className="input-box">
-              <label htmlFor="email">email</label>
-              <Field type="text" id="email" name="email" />
+            <div className="field-wrap">
+              <label htmlFor="email">Email</label>
+              <Field 
+                type="text" 
+                id="email" 
+                name="email"
+                className="field"
+                placeholder="email"
+              />
+              <div className="errors">
+                {touched["email"] && errors["email"]}
+              </div>
             </div>
 
-            <div className="input-box">
+            <div className="field-wrap">
               <label htmlFor="password">Password</label>
-              <Field type="password" id="password" name="password" />
-            </div>  
+              <Field 
+                type="password" 
+                id="password"
+                className="field"
+                name="password"
+                placeholder="password"
+              />
+              <div className="errors">
+                {touched["password"] && errors["password"]}  
+              </div>  
+            </div>
             <div>
-              <button type="submit" >Submit</button>
+              <button className="submit" type="submit">
+                Submit
+              </button>
+            </div>
+            <div className="redirect">
+              <p>Don't have an account? <Link to="/register">Register</Link></p>
             </div>
           </Form>
         )}
