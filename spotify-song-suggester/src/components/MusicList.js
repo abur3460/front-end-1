@@ -55,15 +55,18 @@ const MusicList = () => {
 
     return (
     <div className="songs-page">
-      <input
-        type='text'
-        name='value'
-        value={values.value}
-        onChange={handleChanges}
-        placeholder='Enter song title!'
-      />
-      {console.log('yo', songs.map(song => song))}
-      <button onClick={onClick}>Search!</button>
+      <div className="search">
+        <input
+          type='text'
+          name='value'
+          value={values.value}
+          onChange={handleChanges}
+          className="song-field"
+          placeholder='Enter song title!'
+        />
+        {console.log('yo', songs.map(song => song))}
+        <button className="search-button" onClick={onClick}>Search!</button>
+      </div>
       {songs.map(song => (
         <div className="songCard">
           <div className="track-name" key={song.id}>
@@ -72,7 +75,7 @@ const MusicList = () => {
           <div className="artist">
             <p><em>{song.artist_name}</em></p>
           </div>
-          <div className="button">
+          <div className="add-button">
             <button className="favorite" title="Add to library">+</button>
           </div>
         </div>
