@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+//mobile
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+}
+//tablet
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+}
+//desktop
+@media only screen and (min-width: 1201px) {
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}

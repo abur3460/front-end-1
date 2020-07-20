@@ -1,0 +1,191 @@
+//mobile
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+}
+//tablet
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+}
+//desktop
+@media only screen and (min-width: 1201px) {
+  .landing:before {
+    position: absolute;
+    top: -18px;
+    margin: 0 auto;
+    width: 52vw;
+    height: 79vh;
+    content: "";
+    background: #2c6922;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    z-index: -1;
+  }
+  .landing {
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto;
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 12vh;
+    background: rgb(53, 53, 53);
+    h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 40px;
+      color: #2c6922;
+      font-size: 2rem;
+    }
+    .landing-icon.title {
+      color: #2c6922;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    .intro {
+      text-align: center;
+      width: 50%;
+      margin: 13% 5% 0 5%;
+
+      .about-wrapper {
+        margin-top: 16%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .info-title {
+          font-size: 1.2rem;
+          color: rgb(173, 173, 173);
+          svg {
+            position: relative;
+            top: 1px;
+            margin-right: 0.5rem;
+          }
+        }
+        .info {
+          color: rgb(173, 173, 173);
+          width: 80%;
+          line-height: 20px;
+          margin: 1rem auto 4rem auto;
+        }
+      }
+    }
+    .login-form {
+      color: rgb(173, 173, 173);
+      padding-top: 15%;
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      a {
+        color: #2c6922;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .sign-up {
+        margin-bottom: 5vh;
+        margin-top: 0.5vh;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        justify-content: space-around;
+      }
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        label {
+          text-transform: uppercase;
+          width: 75%;
+          margin: 0.2rem auto;
+          text-align: left;
+        }
+        input {
+          margin: 0 auto;
+          width: 75%;
+          height: 2rem;
+          border-radius: 5px;
+          background: rgb(46, 46, 46);
+          border: 0.5px solid #2c6922;
+          color: white;
+          outline: none;
+        }
+      }
+      .submitBtn {
+        button {
+          outline: none;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: rgb(46, 46, 46);
+          position: relative;
+          top: 40px;
+          left: 60px;
+          transform: translate(-50%, -50%);
+          color: #2c6922;
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          padding: 0.5em 2em;
+          border-radius: 5px;
+          border: 2px solid #2c6922;
+          transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+        }
+        button::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          background: #2c6922;
+          transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1),
+            left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+          z-index: -1;
+        }
+        button::after {
+          content: "";
+          display: inline-block;
+          background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
+          position: absolute;
+          top: 0;
+          left: calc(100% - 3em);
+          right: 3em;
+          bottom: 0;
+          background-size: 1.5em;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+        }
+        button:hover {
+          padding: 0.5em 3.5em 0.5em 0.5em;
+        }
+        button:hover::before {
+          left: calc(100% - 3em);
+          right: 0;
+          transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1),
+            left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+        }
+        button:hover::after {
+          right: 0;
+          transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+        }
+      }
+      .forgot {
+        position: relative;
+        top: 25px;
+      }
+      .line {
+        -webkit-filter: blur(1px);
+        filter: blur(1px);
+        position: absolute;
+        top: 0px;
+        height: 75vh;
+        width: 3px;
+        background: #2c6922;
+        z-index: 10;
+      }
+    }
+  }
+}
