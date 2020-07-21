@@ -15,7 +15,7 @@ const Login = () => {
       .then((resp) => {
         console.log(resp.data);
         localStorage.setItem("token", resp.data.token);
-        history.push("/");
+        history.push("/home");
       })
       .catch((err) => console.log(err));
   };
@@ -80,7 +80,7 @@ const Login = () => {
                 <Field type="password" id="password" name="password" />
               </div>
               <div className="submitBtn">
-                <button type="submit">Submit</button>
+                <button type="submit">Log in</button>
               </div>
             </Form>
           )}

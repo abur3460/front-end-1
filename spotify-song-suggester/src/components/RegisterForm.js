@@ -19,7 +19,7 @@ const RegisterForm = () => {
       .post("https://spotifysongsbw.herokuapp.com/api/user/register", values)
       .then((res) => {
         console.log(res);
-        history.push("/login");
+        history.push("/");
       })
       .catch((err) => console.log(err.message));
   };
