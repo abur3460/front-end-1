@@ -91,7 +91,7 @@ const LoginForm = () => {
           Forgot email or password? <Link to="/reset">Click here!</Link>
         </div>
         <div className="guest-cont" id="guest">
-          <Link to="/songs">
+          <Link to="/home">
             <button className="btn">Continue as guest</button>
           </Link>
         </div>
